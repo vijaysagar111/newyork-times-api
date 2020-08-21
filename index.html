@@ -71,7 +71,7 @@ text-align: center;
     </div>
     <div class="collapse navbar-collapse" id="navbar-primary-collapse">
       <ul class="nav navbar-nav">
-        <li  id="home"><a onclick="page(event)">HOME</a></li>
+        <li  id="home" class="active" ><a  onclick="page(event)">HOME</a></li>
         <li id="world"><a onclick="page(event)">WORLD</a></li>
         <li id="politics"><a onclick="page(event)">POLITICS</a></li>
         <li id="magazine"><a onclick="page(event)">MAGAZINE</a></li>
@@ -92,7 +92,7 @@ text-align: center;
 
  </div>
 </div>
-<script src="fetch.js"></script>
+<script src="script.js"></script>
 <script>
   var header = document.getElementsByClassName("nav")[0];
 var activepart = header.getElementsByTagName("li");
@@ -100,9 +100,9 @@ for (var i = 0; i < activepart.length; i++) {
   activepart[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
   if (current.length > 0) { 
-    current[0].className = current[0].className.replace(" active", "");
+    current[0].className = current[0].className.replace("active", "");
   }
-  this.className += " active";
+  this.className += "active";
   });
 }
 </script>
