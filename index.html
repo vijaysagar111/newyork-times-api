@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style type="text/css">
+    
+
+
+#navbar-primary.navbar-default {
+  background: transparent;
+  border: none;
+}
+  .navbar-nav { 
+    
+    width: 100%;
+    text-align: center;
+    
+  }
+h1{
+
+text-align: center;    
+}
+
+.card{
+  font-family: Staped;
+  margin-bottom: 10px;
+ box-shadow: 2px 2px 2px 2px silver;
+ padding:15px;
+}
+.sectioncard{
+  font-size: 40px !important;
+  font-family: Headlined;
+}
+
+@font-face {
+  font-family: Headlined;
+  src: url('./HeadlinedSolid.otf');
+}
+@font-face {
+  font-family: Staped ;
+  src: url('./Stapel_Condensed\ Regular.otf');
+}
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+  <h1>THE PERTINENT TIMES</h1>
+<nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+      <ul class="nav navbar-nav">
+        <li  id="home"><a onclick="page(event)">HOME</a></li>
+        <li id="world"><a onclick="page(event)">WORLD</a></li>
+        <li id="politics"><a onclick="page(event)">POLITICS</a></li>
+        <li id="magazine"><a onclick="page(event)">MAGAZINE</a></li>
+        <li id="technology"><a onclick="page(event)">TECHNOLOGY</a></li>
+        <li id="science"><a onclick="page(event)">SCIENCE</a></li>
+        <li id="health"><a onclick="page(event)">HEALTH</a></li>
+        <li id="sports"><a onclick="page(event)">SPORTS</a></li>
+        <li id="arts"><a onclick="page(event)">ARTS</a></li>
+        <li id="fashion"><a onclick="page(event)">FASHION</a></li>
+        <li id="food"><a onclick="page(event)">FOOD</a></li>
+        <li id="travel"><a onclick="page(event)">TRAVEL</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+ <div id="section">
+
+ </div>
+</div>
+<script src="fetch.js"></script>
+<script>
+  var header = document.getElementsByClassName("nav")[0];
+var activepart = header.getElementsByTagName("li");
+for (var i = 0; i < activepart.length; i++) {
+  activepart[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+  }
+  this.className += " active";
+  });
+}
+</script>
+</body>
+
+</html>
